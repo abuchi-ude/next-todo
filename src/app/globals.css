@@ -1,6 +1,58 @@
 @import "tailwindcss";
 
-:root {
+@theme {
+  --color-primary: #192D50;
+  --color-accent: #d1d5dc;
+}
+
+.autofill-bg-white:-webkit-autofill,
+.autofill-bg-white:-webkit-autofill:hover,
+.autofill-bg-white:-webkit-autofill:focus {
+  /* Set the background and text color for autofill */
+  -webkit-box-shadow: 0 0 0px 1000px #7a7d83 inset;
+  -webkit-text-fill-color: #fff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.autofill-bg-white:-webkit-autofill:focus {
+  /* This creates the outline on focus */
+  outline: none;
+  box-shadow: 0 0 0 4px #d1d5db, 0 0 0 1000px #7a7d83 inset !important;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 9999;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #ddd;
+  border-top: 4px solid #42b883; /* Vue green */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.success {
+  color: green;
+}
+.error {
+  color: red;
+}
+.done {
+  text-decoration: line-through;
+}
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -23,4 +75,4 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
