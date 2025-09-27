@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Next Todo App
 
-First, run the development server:
+A full-featured Todo application built with Next.js 15, React 19, Firebase, and TailwindCSS. This project demonstrates modern Next.js App Router patterns, authentication, protected routes, and real-time data management.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+- **Authentication:** Firebase Auth for secure login/signup, including Google login.
+- **Protected Routes:** All main pages (todos, add-todo, search, details) require authentication.
+- **Todo Management:** Add, edit, delete, and mark todos as completed or pending.
+- **Pagination:** Efficiently browse large lists of todos.
+- **Search:** Instantly search todos by title.
+- **Optimistic UI:** Fast updates for todo status and edits.
+- **Responsive Design:** Mobile-friendly, modern UI with TailwindCSS.
+- **Custom Components:** Checkbox, Pagination, Nav, Seperator, AuthGuard.
+- **Loading States:** Overlay spinner for all async actions.
+- **Error & Success Messages:** User feedback for all actions.
+- **Firebase & JSONPlaceholder:** Combines real user todos (Firebase) and sample todos (JSONPlaceholder) for demo purposes.
+- **App Router:** Uses Next.js App Router for file-based routing and layouts.
+
+## Tech Stack
+
+- **Next.js 15** (App Router)
+- **React 19**
+- **TypeScript**
+- **Firebase v12** (Auth, Firestore)
+- **TailwindCSS v4**
+- **Phosphor Icons (React)**
+- **ESLint** (with Next.js config)
+
+## Project Structure
+
+```
+next-todo/
+├── public/
+│   └── *.svg
+├── src/
+│   ├── app/
+│   │   ├── (auth)/
+│   │   │   ├── login/page.tsx
+│   │   │   └── signup/page.tsx
+│   │   ├── add-todo/page.tsx
+│   │   ├── todos/
+│   │   │   ├── page.tsx
+│   │   │   ├── loading.tsx
+│   │   │   └── [id]/page.tsx
+│   │   ├── search/page.tsx
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components/
+│   │   ├── AuthGuard.tsx
+│   │   ├── Checkbox.tsx
+│   │   ├── Home/
+│   │   ├── Nav.tsx
+│   │   ├── Pagination.tsx
+│   │   └── Seperator.tsx
+│   ├── hooks/
+│   │   └── useTodos.ts
+│   └── lib/
+│       └── firebase.ts
+├── package.json
+├── tsconfig.json
+├── next.config.ts
+├── postcss.config.mjs
+├── tailwind.config.js
+├── eslint.config.mjs
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup & Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone the repository:**
+	```bash
+	git clone <your-repo-url>
+	cd next-todo
+	```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Install dependencies:**
+	```bash
+	pnpm install
+	# or npm install, yarn install, bun install
+	```
 
-## Learn More
+3. **Configure Firebase:**
+	- Create a Firebase project.
+	- Enable Authentication (Email/Password, Google).
+	- Enable Firestore Database.
+	- Copy your Firebase config to `src/lib/firebase.ts`.
 
-To learn more about Next.js, take a look at the following resources:
+4. **Run the development server:**
+	```bash
+	pnpm dev
+	# or npm run dev, yarn dev, bun dev
+	```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. **Open the app:**
+	- Visit [http://localhost:3000](http://localhost:3000)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Usage
 
-## Deploy on Vercel
+- **Sign Up / Login:** Access via `/signup` or `/login`.
+- **Todos:** View, edit, complete, or delete todos at `/todos`.
+- **Add Todo:** Create new todos at `/add-todo`.
+- **Search:** Find todos by title at `/search`.
+- **Todo Details:** View details at `/todos/[id]`.
+- **Protected Routes:** All main pages redirect to `/login` if not authenticated.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Styling:** Modify `globals.css` and Tailwind config for custom themes.
+- **Components:** Extend or replace components in `src/components/`.
+- **Firebase:** Adjust Firestore rules for production security.
+
+## Scripts
+
+- `pnpm dev` — Start development server
+- `pnpm build` — Build for production
+- `pnpm start` — Start production server
+- `pnpm lint` — Run ESLint
+
+## Environment Variables
+
+Set your Firebase config in `src/lib/firebase.ts`. No `.env` file is required unless you add custom secrets.
+
+## Contributing
+
+Feel free to fork and modify for your own use. Pull requests and issues are welcome for improvements.
+
+---
