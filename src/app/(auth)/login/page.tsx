@@ -123,7 +123,7 @@ const Login = () => {
                     placeholder="Enter your email"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
-                    className="text-primary focus:outline-4 autofill-bg-white focus:border-1 outline-accent w-full py-3 pl-10 bg-primary/10 rounded-xl"
+                    className="text-primary focus:outline-4 autofill-bg-white focus:border outline-accent w-full py-3 pl-10 bg-primary/10 rounded-xl"
                   />
                 </div>
                 {errors.email && (
@@ -144,7 +144,7 @@ const Login = () => {
                     placeholder="Enter your password"
                     value={password}
                     onChange={e => setPassword(e.target.value)}
-                    className="text-primary focus:outline-4 focus:border-1 autofill-bg-white outline-accent w-full py-3 pl-10 bg-primary/10 rounded-xl"
+                    className="text-primary focus:outline-4 focus:border autofill-bg-white outline-accent w-full py-3 pl-10 bg-primary/10 rounded-xl"
                   />
                   <button
                     type="button"

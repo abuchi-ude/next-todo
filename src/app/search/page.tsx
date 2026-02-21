@@ -35,7 +35,7 @@ const SearchTodo = () => {
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
                 placeholder="Search by title..."
-                className="text-lg px-6 autofill-bg-white w-full focus:outline-4 focus:border-1 bg-primary/10 py-3 rounded-xl outline-accent"
+                className="text-lg px-6 autofill-bg-white w-full focus:outline-4 focus:border bg-primary/10 py-3 rounded-xl outline-accent"
               />
               {searchTerm && (
                 <button

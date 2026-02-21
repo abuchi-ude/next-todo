@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const HomeHero = () => {
   return (
-    <div className="bg-gradient-to-br from-primary/5 to-accent/20 py-20">
+    <div className="bg-linear-to-br from-primary/5 to-accent/20 py-20">
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 className="text-4xl md:text-6xl mb-6 text-primary">
         Stay Organized, Stay Productive

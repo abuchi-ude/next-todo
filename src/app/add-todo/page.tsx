@@ -57,7 +57,7 @@ const handleAddTodo = async (e: React.FormEvent) => {
               placeholder="Enter your todo title..."
               value={title}
               onChange={e => setTitle(e.target.value)}
-              className="text-lg px-6 autofill-bg-white focus:outline-4 focus:border-1 bg-primary/10 py-3 rounded-xl outline-accent"
+              className="text-lg px-6 autofill-bg-white focus:outline-4 focus:border bg-primary/10 py-3 rounded-xl outline-accent"
               required
               onKeyDown={e => {
               if (e.key === 'Enter') handleAddTodo(e);

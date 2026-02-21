@@ -186,7 +186,7 @@ const SignUp = () => {
                     placeholder="Enter your full name"
                     value={fullName}
                     onChange={e => setFullName(e.target.value)}
-                    className="text-primary focus:outline-4 focus:border-1 autofill-bg-white outline-accent w-full py-3 pl-10 bg-primary/10 rounded-xl"
+                    className="text-primary focus:outline-4 focus:border autofill-bg-white outline-accent w-full py-3 pl-10 bg-primary/10 rounded-xl"
                   />
                 </div>
                 {errors.fullName && (
@@ -212,7 +212,7 @@ const SignUp = () => {
                     placeholder="Enter your email"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
-                    className="text-primary focus:outline-4 autofill-bg-white focus:border-1 outline-accent w-full py-3 pl-10 bg-primary/10 rounded-xl"
+                    className="text-primary focus:outline-4 autofill-bg-white focus:border outline-accent w-full py-3 pl-10 bg-primary/10 rounded-xl"
                   />
                 </div>
                 {errors.email && (
@@ -238,7 +238,7 @@ const SignUp = () => {
                     placeholder="Create a password"
                     value={password}
                     onChange={e => setPassword(e.target.value)}
-                    className="text-primary focus:outline-4 focus:border-1 autofill-bg-white outline-accent w-full py-3 pl-10 bg-primary/10 rounded-xl"
+                    className="text-primary focus:outline-4 focus:border autofill-bg-white outline-accent w-full py-3 pl-10 bg-primary/10 rounded-xl"
                   />
                   <div className="absolute text-primary top-4 right-3">
                     <CurrentIcon1
@@ -271,7 +271,7 @@ const SignUp = () => {
                     placeholder="Confirm your password"
                     value={confirmPassword}
                     onChange={e => setConfirmPassword(e.target.value)}
-                    className="text-primary focus:outline-4 focus:border-1 autofill-bg-white outline-accent w-full py-3 pl-10 bg-primary/10 rounded-xl"
+                    className="text-primary focus:outline-4 focus:border autofill-bg-white outline-accent w-full py-3 pl-10 bg-primary/10 rounded-xl"
                   />
                   <div className="absolute text-primary top-4 right-3">
                     <CurrentIcon2
