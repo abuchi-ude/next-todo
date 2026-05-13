@@ -53,7 +53,7 @@ const Nav = () => {
               <SunHorizonIcon size="60" weight="duotone" className="text-primary" />
               <div>
                 <p className="text-sm font-bold">HORIZON</p>
-                <p className="text-xs">By Abuchi</p>
+                <p className="text-xs">By Madubuchi</p>
               </div>
             </Link>
           </section>
